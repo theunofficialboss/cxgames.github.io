@@ -4,35 +4,49 @@
 
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <title>DooM</title>
+<head>
+  <meta charset="utf-8">
+  <title>DooM</title>
 
-    <style>
-      .container {
-        display: flex;
-        justify-content: center;
-      }
-      body {
-        font-family: sans-serif;
-        color: white;
-        background-color: rgb(34, 51, 65);
-      }
-    </style>
-  </head>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+    }
 
-  <body>
-    <p id="focushint"></p>
-    <button id="fullscreenButton">Fullscreen</button>
-    <div class="container">
-      <canvas id="screen" width="640" height="400" tabindex="0">This is where Doom should render.</canvas>
-    </div>
-    <br>
-    gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span id="getms_stats">0</span><br>
-    DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
-    Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+    body {
+      font-family: sans-serif;
+      color: white;
+      background-color: rgb(34, 51, 65);
+    }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJCEBTLQVV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <script src="main.js" defer></script>
-  </body>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RJCEBTLQVV');
+  </script>
+</head>
+
+<body>
+  <p id="focushint"></p>
+  <button id="fullscreenButton">Fullscreen</button>
+  <div class="container">
+    <canvas id="screen" width="640" height="400" tabindex="0">This is where Doom should render.</canvas>
+  </div>
+  <br>
+  gettmilliseconds calls per second: <span id="getmsps_stats">0</span> Total getmilliseconds calls: <span
+    id="getms_stats">0</span><br>
+  DooM FPS: <span id="fps_stats">0</span> (target: 35FPS) Total Frames drawn: <span id="drawframes_stats">0</span><br>
+  Browser Animation FPS: <span id="animationfps_stats">0</span> (target: around 60FPS, depending on browser)<br>
+
+  <script src="main.js" defer></script>
+</body>
 
 </html>
